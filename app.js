@@ -19,6 +19,20 @@ app.engine('html', nunjucks.render);
 
 app.use(router);
 
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+})
+
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send(err.message);
+
+});
+
+
+
 models.db.sync({})
 .then(function() {
   app.listen(3000, function() {

@@ -3,9 +3,26 @@
 {% block content %}
 
 <h1>Hellooooo Tripplanner</h1>
+<label for="hotels">Hotels</label>
+<select id="hotels">
 {% for hotel in hotels %}
-  <h2>{{hotel.name}}</h2>
+  <option value="{{hotel.name}}">{{hotel.name}}</option>
 
 {% endfor %}
+</select>
+<label for="restaurants">Restaurants</label>
+<select id="restaurants">
+{% for restaurant in restaurants %}
+  <option value="{{restaurant.name}}">{{restaurant.name}}</option>
+
+{% endfor %}
+</select>
+<label for="activities">Activities</label>
+<select id="activities">
+{% for activity in activities %}
+  <option value="{{activity.name}}">{{activity.name}}</option>
+
+{% endfor %}
+</select>
 
 {% endblock %}
