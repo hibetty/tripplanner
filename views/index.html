@@ -1,28 +1,32 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class="container">
+  <div class="row">
 
-<h1>Hellooooo Tripplanner</h1>
-<label for="hotels">Hotels</label>
-<select id="hotels">
-{% for hotel in hotels %}
-  <option value="{{hotel.name}}">{{hotel.name}}</option>
+      <div class="col-lg-offset-8">
+      <label for="hotels">Hotels</label>
+      <select id="hotels">
+      {% for hotel in hotels %}
+        <option value="{{hotel.name}}">{{hotel.name}}</option>
+      {% endfor %}
+      </select>
 
-{% endfor %}
-</select>
-<label for="restaurants">Restaurants</label>
-<select id="restaurants">
-{% for restaurant in restaurants %}
-  <option value="{{restaurant.name}}">{{restaurant.name}}</option>
+      <label for="restaurants">Restaurants</label>
+      <select id="restaurants">
+      {% for restaurant in restaurants %}
+        <option value="{{restaurant.name}}">{{restaurant.name}}</option>
+      {% endfor %}
+      </select>
 
-{% endfor %}
-</select>
-<label for="activities">Activities</label>
-<select id="activities">
-{% for activity in activities %}
-  <option value="{{activity.name}}">{{activity.name}}</option>
+      <label for="activities">Activities</label>
+      <select id="activities">
+      {% for activity in activities %}
+        <option value="{{activity.name}}">{{activity.name}}</option>
+      {% endfor %}
+      </select>
+    </div>
 
-{% endfor %}
-</select>
-
+  </div>
+</div>
 {% endblock %}

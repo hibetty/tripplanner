@@ -17,6 +17,9 @@ nunjucks.configure('views', {noCache: true});
 app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 
+app.use('/bootstrap', express.static('./node_modules/bootstrap/dist'));
+app.use('/jquery', express.static('./node_modules/jquery/dist'));
+app.use('/static', express.static('./public/'));
 app.use(router);
 
 app.use(function(req, res, next) {
