@@ -3,8 +3,7 @@
 {% block content %}
 <div class="container">
   <div class="row">
-
-      <div class="col-lg-offset-8">
+      <div class="col-lg-offset-8 sidebar">
       <label for="hotels">Hotels</label>
       <select id="hotels">
       {% for hotel in hotels %}
@@ -26,7 +25,15 @@
       {% endfor %}
       </select>
     </div>
-
   </div>
 </div>
+ <script>
+     function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+    </script> 
 {% endblock %}
