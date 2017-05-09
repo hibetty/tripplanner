@@ -1,4 +1,4 @@
-html, body, .container {
+html, body {
   height: 100%;
   margin: 0;
   padding: 0; }
@@ -7,10 +7,35 @@ body {
   padding-top: 50px; }
 
 .sidebar {
-  background-color: goldenrod;
-  z-index: 100;
-  position: absolute;
-  height: 100%; }
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  top: 16%;
+  left: 2%;
+  position: fixed;
+  z-index: 1;
+  height: 60%;
+  width: 30%;
+  padding: 3%; }
 
 #googleMap {
-  height: 100%; }
+  height: 100%;
+  z-index: 0; }
+
+label {
+  color: #cbe6a3;
+  font-weight: 100;
+  font-size: 25px; }
+
+.navbar-default {
+  background-color: #3b3b3b;
+  border-color: #cbe6a3; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #cbe6a3;
+  font-weight: 100;
+  font-size: 18px; }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #fff; }
+
+.navbar-brand > img {
+  width: 20px; }
