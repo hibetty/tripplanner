@@ -36,3 +36,6 @@ label {
   font-size: 18px; }
   .navbar-default .navbar-nav > li > a:hover {
     color: #fff; }
+
+.navbar-brand > img {
+  width: 20px; }
